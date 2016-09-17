@@ -18,10 +18,10 @@ $ npm install --save nunjucks-filter-filesizeformat
 Install as [custom filter](https://mozilla.github.io/nunjucks/api#custom-filters):
 
 ```javascript
-const nunjucks = require('nunjucks');
-const filesizeformat = require('nunjucks-filter-filesizeformat');
+var nunjucks = require('nunjucks');
+var filesizeformat = require('nunjucks-filter-filesizeformat');
 
-const env = new nunjucks.Environment();
+var env = new nunjucks.Environment();
 env.addFilter('filesizeformat', filesizeformat);
 ```
 

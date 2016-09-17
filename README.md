@@ -1,6 +1,6 @@
 # Nunjucks filter `filesizeformat`
 
-[![Build Status](https://travis-ci.org/jbmoelker/nunjucks-filter-filesizeformat.svg?branch=master)](https://travis-ci.org/>/jbmoelker/nunjucks-filter-filesizeformat)
+[![Build Status](https://travis-ci.org/jbmoelker/nunjucks-filter-filesizeformat.svg?branch=master)](https://travis-ci.org/jbmoelker/nunjucks-filter-filesizeformat)
 
 [Nunjucks](https://mozilla.github.io/nunjucks/) [filter](https://mozilla.github.io/nunjucks/templating.html#filters) to format a value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc).
 

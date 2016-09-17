@@ -22,7 +22,7 @@ module.exports = function filesizefomat(input, binary) {
 	} else if (bytes < base) {
 		return bytes + ' Bytes';
 	} else {
-		return units.reduce((match, unit, index) => {
+		return units.reduce(function (match, unit, index) {
 			var size = Math.pow(base, index);
 			if (bytes >= size) {
 				return (bytes/size).toFixed(1) + ' ' + unit;

@@ -42,7 +42,7 @@ Outputs `1.2 MB`
 
 Type: `number`
 
-Value to format as ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc).
+Value in Bytes to format as ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc).
 
 ### binary
 

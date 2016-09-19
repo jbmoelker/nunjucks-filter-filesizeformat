@@ -8,7 +8,9 @@
   "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "npm run test:node && npm run test:browsers",
+    "test:node": "node test.js",
+    "test:browsers": "browserify test.js | testling"
   },
   "keywords": [
     "nunjucks",
@@ -19,13 +21,26 @@
     "jinja"
   ],
   "devDependencies": {
+    "browserify": "13.1.0",
     "nunjucks": "2.5.2",
-    "tape": "4.6.0"
+    "tape": "4.6.0",
+    "testling": "1.7.1"
   },
   "engines": {
     "node": ">=0.10"
   },
   "files": [
     "index.js"
-  ]
+  ],
+  "testling": {
+    "browsers": [
+      "ie/8..10",
+      "firefox/latest",
+      "chrome/latest",
+      "safari/latest",
+      "opera/latest",
+      "iphone/latest",
+      "android-browser/latest"
+    ]
+  }
 }

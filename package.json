@@ -8,7 +8,9 @@
   "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "node test.js",
+    "test:browser:local": "zuul --local 8080 -- test.js",
+    "test:browser:sauce": "zuul -- test.js"
   },
   "keywords": [
     "nunjucks",
@@ -20,7 +22,8 @@
   ],
   "devDependencies": {
     "nunjucks": "2.5.2",
-    "tape": "4.6.0"
+    "tape": "4.6.0",
+    "zuul": "3.11.1"
   },
   "engines": {
     "node": ">=0.10"

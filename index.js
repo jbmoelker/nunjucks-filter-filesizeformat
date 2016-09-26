@@ -2,7 +2,10 @@
 
 // based on https://github.com/pallets/jinja/blob/master/jinja2/filters.py#L371
 
-module.exports = function filesizefomat(input, binary) {
+module.exports = function filesizeformat(input, binary) {
+	var kwargs = getKwargs(arguments);
+	binary = (kwargs.binary !== undefined) ? kwargs.binary : binary;
+
 	var base = binary ? 1024 : 1000;
 	var bytes = parseFloat(input);
 	var units = [
@@ -31,3 +34,8 @@ module.exports = function filesizefomat(input, binary) {
 		});
 	}
 };
+
+function getKwargs(args) {
+	var kwargs = [].pop.call(args);
+	return (typeof kwargs === 'object' && kwargs.__keywords) ? kwargs : {};
+}

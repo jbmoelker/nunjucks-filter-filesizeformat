@@ -37,6 +37,14 @@ test('Uses binary units when `binary` is true', function (t) {
 	t.end();
 });
 
+test('Accepts `binary` as keyword argument', function(t) {
+	t.equal(env.renderString('{{ 100|filesizeformat(binary=true) }}'), '100 Bytes');
+	t.equal(env.renderString('{{ 1000000|filesizeformat(binary=true) }}'), '976.6 KiB');
+	t.equal(env.renderString('{{ 100|filesizeformat(binary=false) }}'), '100 Bytes');
+	t.equal(env.renderString('{{ 1000000|filesizeformat(binary=false) }}'), '1.0 MB');
+	t.end();
+});
+
 test('Works with value not starting with `1`', function (t) {
 	t.equal(env.renderString('{{ 300|filesizeformat }}'), '300 Bytes');
 	t.equal(env.renderString('{{ 3000|filesizeformat }}'), '3.0 kB');

@@ -37,7 +37,7 @@ Outputs `1.2 MB`
 
 ## API
 
-### `filesizeformat(input, [binary])`
+### `{{ input|filesizeformat([binary]) }}`
 
 ### input
 

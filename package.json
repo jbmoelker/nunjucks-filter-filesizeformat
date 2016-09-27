@@ -8,7 +8,7 @@
   "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js | tap-spec"
+    "test": "node test.js | faucet"
   },
   "keywords": [
     "nunjucks",
@@ -19,8 +19,8 @@
     "jinja"
   ],
   "devDependencies": {
+    "faucet": "0.0.1",
     "nunjucks": "2.5.2",
-    "tap-spec": "4.1.1",
     "tape": "4.6.0"
   },
   "engines": {
